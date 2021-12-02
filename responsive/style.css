@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.btn {
+  padding: 10px;
+  margin-top: 20px;
+  min-width: 150px;
+}
+
+header {
+  background-color: #ffd000;
+  min-height: 60px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-control {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+
+.logo {
+  color: #222;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  display: none;
+  padding: 7px;
+  border: 1px solid #222;
+  border-radius: 2px;
+}
+
+.nav-toggle span {
+  width: 20px;
+  height: 4px;
+  background-color: #222;
+  display: block;
+}
+
+.nav-toggle span:nth-child(2) {
+  margin: 4px 0;
+}
+
+nav.nav-items {
+  display: block;
+}
+
+nav.nav-items ul {
+  display: flex;
+  list-style: none;
+}
+
+nav.nav-items ul li {
+  padding: 10px 0px 10px 20px;
+  position: relative;
+}
+
+nav.nav-items ul li:hover .drop-down {
+  display: flex !important;
+}
+
+nav.nav-items ul li a {
+  text-decoration: none;
+  color: #222;
+}
+
+.drop-down {
+  position: absolute;
+  flex-direction: column;
+  top: 40px;
+  background: #2d3437;
+  right: 0px;
+  min-width: max-content;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  display: none !important;
+}
+
+nav.nav-items ul.drop-down li a {
+  color: #fff;
+}
+
+nav.nav-items ul.drop-down li {
+  padding: 7px 5px;
+}
+/* nav style end */
+
+/* banner style star */
+.banner {
+  background: #2d3437;
+  display: flex;
+}
+.banner .col {
+  /* max-width: 50%; */
+  padding: 20px;
+  color: #fff;
+}
+
+.banner .col:first-child {
+  flex: 1;
+}
+
+.banner .heading {
+  font-size: 36px;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+.banner p {
+  font-weight: 100;
+  line-height: 30px;
+  font-size: 17px;
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+/* banner style end */
+
+/* form */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.form-group label {
+  margin-top: 5px;
+}
+
+.form-group input[type="text"],
+input[type="number"],
+input[type="email"] {
+  padding: 5px;
+  margin-top: 5px;
+}
+/* form */
+
+/* card section start here */
+
+.card-section {
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-section .card {
+  max-width: 33.3%;
+  min-width: 33.3%;
+  min-height: 300px;
+  padding: 20px;
+}
+
+.card-section .card .card-inner {
+  min-height: 280px;
+}
+
+.card .card-inner img {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-circle {
+  background-color: #102542;
+}
+
+.card-circle .card {
+  display: flex;
+  justify-content: center;
+}
+
+.card-circle .card-inner,
+.card-circle .card-inner img {
+  border-radius: 100%;
+  width: 280px;
+}
+
+/* footer  */
+.footer {
+  max-height: 100px;
+  background-color: #2d3437;
+}
+
+.footer .card {
+  min-height: 50px;
+  min-width: 33%;
+  color: #fff;
+}
+
+.social i {
+  font-size: 24px;
+  color: #fff;
+  padding-left: 10px;
+}
+
+/* for mobile */
+@media only screen and (max-width: 478px) {
+  header {
+    flex-direction: column;
+  }
+  .header-control {
+    min-width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .nav-toggle {
+    display: block;
+  }
+  nav.nav-items {
+    display: none;
+    min-width: 100%;
+    padding: 10px 0;
+  }
+  nav.nav-items ul {
+    flex-direction: column;
+  }
+  nav.nav-items ul li {
+    padding: 5px 10px;
+    margin: 0 -10px;
+  }
+  nav.nav-items ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  nav.nav-items ul li a {
+    display: block;
+  }
+  .drop-down {
+    position: initial;
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+  }
+  .form-group {
+    width: 100%;
+  }
+
+  .card-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-section .card {
+    min-width: 100%;
+  }
+
+  .footer .card {
+    min-height: 50px;
+    min-width: 33%;
+  }
+}
